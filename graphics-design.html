@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graphics & Branding Showcase – DevAura</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="logo"><img src="assets/logo.jpg" alt="DevAura Logo"></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn-quote">Get a Quote</a>
+    <div class="hamburger" id="hamburger" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="hero-grid"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="hero-badge"><span class="dot"></span> Designs that speak. Brands that stand out</div>
+    <h1>Graphics & <span class="accent">Branding</span></h1>
+    <p class="hero-sub">Explore the flyers, promotional media, and custom brand logos crafted by DevAura. Click any card to inspect in high definition.</p>
+  </header>
+
+  <!-- GRAPHICS GRID SECTION -->
+  <section class="graphics-section" style="padding-top: 60px; background: var(--bg);">
+    <div class="graphics-grid">
+
+      <!-- 1 -->
+      <a href="#lightbox-devaura" class="graphic-card reveal">
+        <div class="graphic-thumb">
+          <img src="assets/Flyers/Devaura.png" alt="DevAura Corporate Flyer">
+        </div>
+        <div class="graphic-info">
+          <h3>DevAura Corporate Flyer</h3>
+          <p>Clean, high-fidelity promotional flyer designed to showcase corporate identity and professional software capabilities.</p>
+        </div>
+      </a>
+
+      <!-- 2 -->
+      <a href="#lightbox-easter" class="graphic-card reveal">
+        <div class="graphic-thumb">
+          <img src="assets/Flyers/Easter.png" alt="DevAura Easter Celebrations Flyer">
+        </div>
+        <div class="graphic-info">
+          <h3>Easter Greetings Flyer</h3>
+          <p>A festive, vibrant promotional layout expressing holiday greetings and digital community branding.</p>
+        </div>
+      </a>
+
+      <!-- 3 -->
+      <a href="#lightbox-maya" class="graphic-card reveal">
+        <div class="graphic-thumb">
+          <img src="assets/Flyers/Glammed by Maya.png" alt="Glammed by Maya Cosmetics Flyer">
+        </div>
+        <div class="graphic-info">
+          <h3>Glammed by Maya Flyer</h3>
+          <p>Premium aesthetics and typographic layout tailored for a luxury cosmetics and beauty brand.</p>
+        </div>
+      </a>
+
+      <!-- 4 -->
+      <a href="#lightbox-gfx" class="graphic-card reveal">
+        <div class="graphic-thumb">
+          <img src="assets/Flyers/Graphics Design Flyer.png" alt="DevAura Graphics & Branding Flyer">
+        </div>
+        <div class="graphic-info">
+          <h3>Graphics Design Service Flyer</h3>
+          <p>DevAura's own promotional media detailing our end-to-end design, branding, and packaging capabilities.</p>
+        </div>
+      </a>
+
+      <!-- 5 -->
+      <a href="#lightbox-msu1" class="graphic-card reveal">
+        <div class="graphic-thumb">
+          <img src="assets/Flyers/MSU flyer 1.png" alt="MSU Event Flyer - V1">
+        </div>
+        <div class="graphic-info">
+          <h3>MSU Event Flyer (V1)</h3>
+          <p>Vibrant event-driven marketing flyer custom engineered for university student communities and gatherings.</p>
+        </div>
+      </a>
+
+      <!-- 6 -->
+      <a href="#lightbox-msu2" class="graphic-card reveal">
+        <div class="graphic-thumb">
+          <img src="assets/Flyers/MSU flyer 2.png" alt="MSU Event Flyer - V2">
+        </div>
+        <div class="graphic-info">
+          <h3>MSU Event Flyer (V2)</h3>
+          <p>An alternative, sleek visual layout designed for student activities, campaigns, and college brand marketing.</p>
+        </div>
+      </a>
+
+      <!-- 7 -->
+      <a href="#lightbox-mobile" class="graphic-card reveal">
+        <div class="graphic-thumb">
+          <img src="assets/Flyers/Mobile Dev Flyer.png" alt="DevAura Mobile App Development Flyer">
+        </div>
+        <div class="graphic-info">
+          <h3>Mobile App Development Flyer</h3>
+          <p>High-contrast, professional tech flyer highlighting DevAura's mobile application engineering services.</p>
+        </div>
+      </a>
+
+      <!-- 8 -->
+      <a href="#lightbox-ngaa-flyer" class="graphic-card reveal">
+        <div class="graphic-thumb">
+          <img src="assets/Flyers/Ngaa Flyer.jpeg" alt="Ngaa Brand Identity Flyer">
+        </div>
+        <div class="graphic-info">
+          <h3>Ngaa Brand Identity Flyer</h3>
+          <p>Minimalist branding flyer expressing clean typography and corporate image alignment for the Ngaa enterprise.</p>
+        </div>
+      </a>
+
+      <!-- 9 -->
+      <a href="#lightbox-ngaa-logo" class="graphic-card reveal">
+        <div class="graphic-thumb" style="background:#0e1220;">
+          <img src="assets/Flyers/Ngaa Logo.jpeg" alt="Ngaa Brand Custom Logo" style="object-fit: contain; padding: 2rem;">
+        </div>
+        <div class="graphic-info">
+          <h3>Ngaa Custom Brand Logo</h3>
+          <p>A sophisticated corporate logo designed with custom geometry representing brand trust and stability.</p>
+        </div>
+      </a>
+
+      <!-- 10 -->
+      <a href="#lightbox-smart" class="graphic-card reveal">
+        <div class="graphic-thumb">
+          <img src="assets/Flyers/Smart Solutions Flyer.png" alt="Smart Solutions Corporate Flyer">
+        </div>
+        <div class="graphic-info">
+          <h3>Smart Solutions Corporate Flyer</h3>
+          <p>Clean modern design and business-focused graphic structure made for corporate service operations.</p>
+        </div>
+      </a>
+
+      <!-- 11 -->
+      <a href="#lightbox-web1" class="graphic-card reveal">
+        <div class="graphic-thumb">
+          <img src="assets/Flyers/WebDev Flyer.png" alt="DevAura Web Design Flyer - V1">
+        </div>
+        <div class="graphic-info">
+          <h3>Web Development Flyer (V1)</h3>
+          <p>Clean visual assets showing modern web design practices, conversion layout principles, and code strategies.</p>
+        </div>
+      </a>
+
+      <!-- 12 -->
+      <a href="#lightbox-web2" class="graphic-card reveal">
+        <div class="graphic-thumb">
+          <img src="assets/Flyers/WebDev Flyer 2.png" alt="DevAura Web Design Flyer - V2">
+        </div>
+        <div class="graphic-info">
+          <h3>Web Development Flyer (V2)</h3>
+          <p>Alternative bold layout designed to capture corporate presence, performance, and SEO blueprints.</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- LIGHTBOX OVERLAYS -->
+  <div id="lightbox-devaura" class="lightbox-overlay">
+    <div class="lightbox-content">
+      <a href="#" class="lightbox-close">&times; Close</a>
+      <img src="assets/Flyers/Devaura.png" alt="DevAura Corporate Flyer">
+      <p class="lightbox-caption">DevAura Corporate Flyer</p>
+    </div>
+  </div>
+
+  <div id="lightbox-easter" class="lightbox-overlay">
+    <div class="lightbox-content">
+      <a href="#" class="lightbox-close">&times; Close</a>
+      <img src="assets/Flyers/Easter.png" alt="DevAura Easter Celebrations Flyer">
+      <p class="lightbox-caption">DevAura Easter Greetings Flyer</p>
+    </div>
+  </div>
+
+  <div id="lightbox-maya" class="lightbox-overlay">
+    <div class="lightbox-content">
+      <a href="#" class="lightbox-close">&times; Close</a>
+      <img src="assets/Flyers/Glammed by Maya.png" alt="Glammed by Maya Cosmetics Flyer">
+      <p class="lightbox-caption">Glammed by Maya Cosmetics Flyer</p>
+    </div>
+  </div>
+
+  <div id="lightbox-gfx" class="lightbox-overlay">
+    <div class="lightbox-content">
+      <a href="#" class="lightbox-close">&times; Close</a>
+      <img src="assets/Flyers/Graphics Design Flyer.png" alt="DevAura Graphics & Branding Flyer">
+      <p class="lightbox-caption">DevAura Graphics & Branding Flyer</p>
+    </div>
+  </div>
+
+  <div id="lightbox-msu1" class="lightbox-overlay">
+    <div class="lightbox-content">
+      <a href="#" class="lightbox-close">&times; Close</a>
+      <img src="assets/Flyers/MSU flyer 1.png" alt="MSU Event Flyer - V1">
+      <p class="lightbox-caption">MSU Event Flyer (Version 1)</p>
+    </div>
+  </div>
+
+  <div id="lightbox-msu2" class="lightbox-overlay">
+    <div class="lightbox-content">
+      <a href="#" class="lightbox-close">&times; Close</a>
+      <img src="assets/Flyers/MSU flyer 2.png" alt="MSU Event Flyer - V2">
+      <p class="lightbox-caption">MSU Event Flyer (Version 2)</p>
+    </div>
+  </div>
+
+  <div id="lightbox-mobile" class="lightbox-overlay">
+    <div class="lightbox-content">
+      <a href="#" class="lightbox-close">&times; Close</a>
+      <img src="assets/Flyers/Mobile Dev Flyer.png" alt="DevAura Mobile App Development Flyer">
+      <p class="lightbox-caption">Mobile App Development Flyer</p>
+    </div>
+  </div>
+
+  <div id="lightbox-ngaa-flyer" class="lightbox-overlay">
+    <div class="lightbox-content">
+      <a href="#" class="lightbox-close">&times; Close</a>
+      <img src="assets/Flyers/Ngaa Flyer.jpeg" alt="Ngaa Brand Identity Flyer">
+      <p class="lightbox-caption">Ngaa Brand Identity Flyer</p>
+    </div>
+  </div>
+
+  <div id="lightbox-ngaa-logo" class="lightbox-overlay">
+    <div class="lightbox-content">
+      <a href="#" class="lightbox-close">&times; Close</a>
+      <img src="assets/Flyers/Ngaa Logo.jpeg" alt="Ngaa Brand Custom Logo" style="background:#0e1220; padding:1.5rem;">
+      <p class="lightbox-caption">Ngaa Custom Brand Logo</p>
+    </div>
+  </div>
+
+  <div id="lightbox-smart" class="lightbox-overlay">
+    <div class="lightbox-content">
+      <a href="#" class="lightbox-close">&times; Close</a>
+      <img src="assets/Flyers/Smart Solutions Flyer.png" alt="Smart Solutions Corporate Flyer">
+      <p class="lightbox-caption">Smart Solutions Corporate Flyer</p>
+    </div>
+  </div>
+
+  <div id="lightbox-web1" class="lightbox-overlay">
+    <div class="lightbox-content">
+      <a href="#" class="lightbox-close">&times; Close</a>
+      <img src="assets/Flyers/WebDev Flyer.png" alt="DevAura Web Design Flyer - V1">
+      <p class="lightbox-caption">Web Development Flyer (Version 1)</p>
+    </div>
+  </div>
+
+  <div id="lightbox-web2" class="lightbox-overlay">
+    <div class="lightbox-content">
+      <a href="#" class="lightbox-close">&times; Close</a>
+      <img src="assets/Flyers/WebDev Flyer 2.png" alt="DevAura Web Design Flyer - V2">
+      <p class="lightbox-caption">Web Development Flyer (Version 2)</p>
+    </div>
+  </div>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <h2>Need a high-converting corporate design?</h2>
+    <p>We craft brand identities, marketing flyers, packaging designs, and social media content tailored to generate massive market results.</p>
+    <a href="contact.html" class="btn-primary">Consult With Our Designers</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="index.html" class="logo"><img src="assets/logo.jpg" alt="DevAura Logo"></a>
+    <ul class="footer-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <p class="footer-copy">© 2025 DevAura. All rights reserved.</p>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/2637XXXXXXXX" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">💬</a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

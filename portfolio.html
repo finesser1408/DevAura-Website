@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Portfolio – DevAura</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="logo"><img src="assets/logo.jpg" alt="DevAura Logo"></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn-quote">Get a Quote</a>
+    <div class="hamburger" id="hamburger" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="hero-grid"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="hero-badge"><span class="dot"></span> Case Studies & Shipped Work</div>
+    <h1>Our <span class="accent-v">Portfolio</span></h1>
+    <p class="hero-sub">Take a look at the software products we've engineered and shipped for our clients.</p>
+  </header>
+
+  <!-- PORTFOLIO SECTION -->
+  <section class="portfolio" id="portfolio" style="padding-top: 60px;">
+    <div class="portfolio-grid">
+
+      <div class="project-card reveal">
+        <div class="project-thumb web">
+          <div class="mock-browser">
+            <div class="mock-browser-content">
+              <div class="mock-line accent"></div>
+              <div class="mock-line"></div>
+              <div class="mock-line short"></div>
+              <div class="mock-line"></div>
+              <div class="mock-line short"></div>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags"><span class="tag tag-web">Web</span><span class="tag tag-web">Finance</span></div>
+          <h3>LA Financial Services</h3>
+          <p>A professional financial services website delivering trust, clarity and strong online presence to a Zimbabwean finance firm.</p>
+          <a href="https://lafinancialservices.co.zw" target="_blank" class="project-link">Visit Site →</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-thumb mobile-1">
+          <div class="mock-phone">🛍️</div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags"><span class="tag tag-mobile">Mobile App</span><span class="tag tag-mobile">E-Commerce</span></div>
+          <h3>ShopSnazy</h3>
+          <p>A mobile shopping app connecting buyers and sellers across Zimbabwe with a smooth, fast, and intuitive experience.</p>
+          <a href="#" class="project-link">View Project →</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-thumb mobile-2">
+          <div class="mock-phone">💼</div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags"><span class="tag tag-mobile">Mobile App</span><span class="tag tag-mobile">Gig Economy</span></div>
+          <h3>ZimGigs</h3>
+          <p>A gig economy platform connecting skilled freelancers with businesses and individuals looking for quality local talent.</p>
+          <a href="#" class="project-link">View Project →</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-thumb coming">
+          <div class="mock-phone" style="opacity:0.4">💰</div>
+          <div class="blur-overlay">🔒</div>
+        </div>
+        <span class="coming-badge">Coming Soon</span>
+        <div class="project-info">
+          <div class="project-tags"><span class="tag tag-soon">In Development</span><span class="tag tag-soon">FinTech</span></div>
+          <h3>Imali</h3>
+          <p>Our next mobile app — a fintech solution built for the African market. Stay tuned for the big reveal.</p>
+          <a href="contact.html" class="project-link">Get Notified →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GRAPHICS & BRANDING PREVIEW -->
+  <section class="graphics-preview" style="background: var(--bg2); border-top: 1px solid var(--border); padding-bottom: 100px;">
+    <div class="section-head reveal" style="padding-top: 80px;">
+      <p class="section-label">Branding & Print Media</p>
+      <h2 class="section-title">Graphics & Branding Portfolio</h2>
+      <p class="section-sub">Corporate brand logo blueprints and promotional flyers custom designed by DevAura.</p>
+    </div>
+    <div class="portfolio-grid">
+
+      <div class="project-card reveal">
+        <div class="project-thumb web" style="background:#0e1220; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+          <img src="assets/Flyers/Ngaa Logo.jpeg" alt="Ngaa Custom Brand Logo" style="height: 100%; width: 100%; object-fit: contain; padding: 2rem;">
+        </div>
+        <div class="project-info">
+          <div class="project-tags"><span class="tag tag-web" style="background:rgba(0,229,255,0.1); color:var(--cyan);">Branding</span><span class="tag tag-web" style="background:rgba(0,229,255,0.1); color:var(--cyan);">Logo</span></div>
+          <h3>Ngaa Custom Brand Logo</h3>
+          <p>A sophisticated corporate logo designed with precise custom geometry representing brand trust and stability.</p>
+          <a href="graphics-design.html#lightbox-ngaa-logo" class="project-link">View Full Logo →</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-thumb web" style="display:flex; align-items:center; justify-content:center; overflow:hidden;">
+          <img src="assets/Flyers/Graphics Design Flyer.png" alt="DevAura Graphics Flyer" style="height: 100%; width: 100%; object-fit: cover;">
+        </div>
+        <div class="project-info">
+          <div class="project-tags"><span class="tag tag-web" style="background:rgba(0,229,255,0.1); color:var(--cyan);">Flyer</span><span class="tag tag-web" style="background:rgba(0,229,255,0.1); color:var(--cyan);">Marketing</span></div>
+          <h3>DevAura Graphics Flyer</h3>
+          <p>Professional agency marketing media designed to capture design systems, brand guidelines, and print services.</p>
+          <a href="graphics-design.html#lightbox-gfx" class="project-link">Inspect Flyer →</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-thumb web" style="display:flex; align-items:center; justify-content:center; overflow:hidden;">
+          <img src="assets/Flyers/Mobile Dev Flyer.png" alt="Mobile App Development Flyer" style="height: 100%; width: 100%; object-fit: cover;">
+        </div>
+        <div class="project-info">
+          <div class="project-tags"><span class="tag tag-mobile" style="background:rgba(124,92,252,0.15); color:#a78bfa;">Flyer</span><span class="tag tag-mobile" style="background:rgba(124,92,252,0.15); color:#a78bfa;">Mobile</span></div>
+          <h3>Mobile App Development Flyer</h3>
+          <p>High-contrast, tech-focused marketing layout presenting DevAura's mobile application engineering capabilities.</p>
+          <a href="graphics-design.html#lightbox-mobile" class="project-link">Inspect Flyer →</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-thumb web" style="display:flex; align-items:center; justify-content:center; overflow:hidden;">
+          <img src="assets/Flyers/WebDev Flyer.png" alt="Web Development Flyer" style="height: 100%; width: 100%; object-fit: cover;">
+        </div>
+        <div class="project-info">
+          <div class="project-tags"><span class="tag tag-web" style="background:rgba(0,229,255,0.1); color:var(--cyan);">Flyer</span><span class="tag tag-web" style="background:rgba(0,229,255,0.1); color:var(--cyan);">Web</span></div>
+          <h3>Web Development Flyer</h3>
+          <p>Clean, structural tech media laying out DevAura's modern custom website blueprints and performance metrics.</p>
+          <a href="graphics-design.html#lightbox-web1" class="project-link">Inspect Flyer →</a>
+        </div>
+      </div>
+
+    </div>
+    <div style="text-align: center; margin-top: 4rem;" class="reveal">
+      <a href="graphics-design.html" class="btn-secondary">View Full Design Portfolio →</a>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <h2>Want to build something similar?</h2>
+    <p>Let's build a software product that moves your business forward.</p>
+    <a href="contact.html" class="btn-primary">Get a Quote</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="index.html" class="logo"><img src="assets/logo.jpg" alt="DevAura Logo"></a>
+    <ul class="footer-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <p class="footer-copy">© 2025 DevAura. All rights reserved.</p>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/2637XXXXXXXX" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">💬</a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
