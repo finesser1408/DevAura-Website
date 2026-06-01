@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Explore DevAura's web development showcase featuring enterprise portals, artificial intelligence hubs, agritech platforms, and high-converting corporate websites in Zimbabwe.">
+  <title>Web Development Services – DevAura</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="logo" id="navLogo"><img src="assets/logo.jpg" alt="DevAura Logo"></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn-quote" id="navQuoteBtn">Get a Quote</a>
+    <div class="hamburger" id="hamburger" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="hero-grid"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="hero-badge"><span class="dot"></span> Web Apps | Portals | E-Commerce</div>
+    <h1>Web <span class="accent">Development</span></h1>
+    <p class="hero-sub">Discover the high-performance portals, AI repositories, agritech systems, and corporate
+      platforms built by DevAura. Click any card to inspect the live service.</p>
+  </header>
+
+  <!-- WEB SHOWCASE SECTION -->
+  <section class="services" id="webShowcaseSection" style="padding-top: 60px;">
+    <div class="services-grid reveal">
+
+      <!-- HPC.AC.ZW -->
+      <a href="https://hpc.ac.zw" target="_blank" class="service-card" id="project-card-hpc">
+        <div class="service-icon">🖥️</div>
+        <div class="project-tags" style="margin-bottom: 0.75rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <span class="tag tag-web">Supercomputing</span>
+          <span class="tag tag-web">Enterprise Portal</span>
+        </div>
+        <h3>hpc.ac.zw</h3>
+        <p>The flagship portal for the Zimbabwe Center for High Performance Computing. Engineered for supercomputer node
+          registration, researchers onboarding, and hosting academic clusters information.</p>
+        <span class="service-arrow" style="margin-top: 1.25rem; display: inline-block;">Inspect Showcase →</span>
+      </a>
+
+      <!-- AIHUB.AC.ZW -->
+      <a href="https://aihub.ac.zw" target="_blank" class="service-card" id="project-card-aihub">
+        <div class="service-icon">🧠</div>
+        <div class="project-tags" style="margin-bottom: 0.75rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <span class="tag tag-web">AI Repository</span>
+          <span class="tag tag-web">Research Portal</span>
+        </div>
+        <h3>aihub.ac.zw</h3>
+        <p>A centralized platform showcasing national Artificial Intelligence research, model repositories, dataset
+          access, and developer frameworks sponsored by ZCHPC.</p>
+        <span class="service-arrow" style="margin-top: 1.25rem; display: inline-block;">Inspect Showcase →</span>
+      </a>
+
+      <!-- FARMCONNECT -->
+      <a href="https://farmconnect.zchpc.ac.zw" target="_blank" class="service-card" id="project-card-farmconnect">
+        <div class="service-icon">🌱</div>
+        <div class="project-tags" style="margin-bottom: 0.75rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <span class="tag tag-web">AgriTech</span>
+          <span class="tag tag-web">Data Analytics</span>
+        </div>
+        <h3>farmconnect.zchpc.ac.zw</h3>
+        <p>An advanced agricultural connectivity portal mapping climate sensors, crop predictive models, GIS maps, and
+          university research outcomes directly to modern farming enterprises.</p>
+        <span class="service-arrow" style="margin-top: 1.25rem; display: inline-block;">Inspect Showcase →</span>
+      </a>
+
+      <!-- LA FINANCIAL SERVICES -->
+      <a href="https://lafinancialservices.co.zw" target="_blank" class="service-card" id="project-card-lafinancial">
+        <div class="service-icon">💼</div>
+        <div class="project-tags" style="margin-bottom: 0.75rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <span class="tag tag-web">FinTech UI</span>
+          <span class="tag tag-web">Corporate Web</span>
+        </div>
+        <h3>lafinancialservices.co.zw</h3>
+        <p>A professional financial services web interface custom designed for Zimbabwe's premier asset consulting and
+          loan advisory firm. Built with extreme speed, clarity, and SEO optimization.</p>
+        <span class="service-arrow" style="margin-top: 1.25rem; display: inline-block;">Inspect Showcase →</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner" id="webCtaSection">
+    <h2>Need a high-performance web solution?</h2>
+    <p>We build scalable enterprise web systems, database integrations, and high-converting websites custom tailored to
+      your business operations.</p>
+    <a href="contact.html" class="btn-primary" id="webCtaBtn">Start a Project with Us</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="index.html" class="logo" id="footerLogo"><img src="assets/logo.jpg" alt="DevAura Logo"></a>
+    <ul class="footer-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <p class="footer-copy">© 2025 DevAura. All rights reserved.</p>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/2637XXXXXXXX" target="_blank" class="whatsapp-float" id="whatsAppFloatBtn"
+    title="Chat on WhatsApp">💬</a>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -105,7 +105,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (
       href === currentPath ||
       (currentPath === 'index.html' && href === 'index.html') ||
-      (currentPath === 'index.html' && href === '#')
+      (currentPath === 'index.html' && href === '#') ||
+      ((currentPath === 'web-development.html' || currentPath === 'graphics-design.html' || currentPath === 'software-consulting.html') && href === 'services.html')
     ) {
       link.classList.add('active');
     } else {

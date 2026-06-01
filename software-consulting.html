@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore DevAura's software consulting services in Zimbabwe. We offer system architecture design, tech stack selection, cloud audits, and digital transformation blueprints.">
+  <title>Software Consulting Services – DevAura</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="logo" id="navLogo"><img src="assets/logo.jpg" alt="DevAura Logo"></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn-quote" id="navQuoteBtn">Get a Quote</a>
+    <div class="hamburger" id="hamburger" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="hero-grid"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="hero-badge"><span class="dot"></span> Technical Blueprints | Tech Stack Choice | Strategy</div>
+    <h1>Software <span class="accent-v">Consulting</span></h1>
+    <p class="hero-sub">We guide businesses through complex software challenges, choose scalable architectures, audit infrastructure, and align technology plans directly with business goals.</p>
+  </header>
+
+  <!-- CONSULTING SERVICES SECTION -->
+  <section class="services" id="consultingServicesSection" style="padding-top: 60px;">
+    <div class="services-grid reveal">
+
+      <!-- ARCHITECTURE BLUEPRINTING -->
+      <div class="service-card" id="consulting-architecture">
+        <div class="service-icon">🏗️</div>
+        <div class="project-tags" style="margin-bottom: 0.75rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <span class="tag tag-web">System Design</span>
+          <span class="tag tag-web">Database Schema</span>
+          <span class="tag tag-web">APIs</span>
+        </div>
+        <h3>Architecture Blueprinting</h3>
+        <p>Formulate resilient, scalable software systems before writing a single line of code. We map database schemas, design microservices structures, and layout secure API communication specifications tailored to support rapid user growth.</p>
+        <a href="contact.html?service=consulting" class="service-arrow" style="margin-top: 1.25rem; display: inline-block;">Request Architecture Review &rarr;</a>
+      </div>
+
+      <!-- TECH STACK SELECTION -->
+      <div class="service-card" id="consulting-techstack">
+        <div class="service-icon">🛠️</div>
+        <div class="project-tags" style="margin-bottom: 0.75rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <span class="tag tag-web">Future-Proofing</span>
+          <span class="tag tag-web">Frameworks</span>
+          <span class="tag tag-web">Security</span>
+        </div>
+        <h3>Tech Stack Selection</h3>
+        <p>Avoid expensive rewrites down the line. We analyze your requirements, budget, and business milestones to recommend the right frameworks (e.g. Next.js, Flutter), databases, and infrastructure partners to set your product up for success.</p>
+        <a href="contact.html?service=consulting" class="service-arrow" style="margin-top: 1.25rem; display: inline-block;">Consult on Tech Stack &rarr;</a>
+      </div>
+
+      <!-- INFRASTRUCTURE & CLOUD AUDITS -->
+      <div class="service-card" id="consulting-cloud">
+        <div class="service-icon">☁️</div>
+        <div class="project-tags" style="margin-bottom: 0.75rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <span class="tag tag-web">Cost Optimization</span>
+          <span class="tag tag-web">DevOps</span>
+          <span class="tag tag-web">AWS / Azure / GCP</span>
+        </div>
+        <h3>Infrastructure & Cloud Audits</h3>
+        <p>Reduce hosting costs and close potential security gaps. We perform thorough audits of your current cloud environments to ensure optimal database performance, strict data access control, and cost-effective scaling triggers.</p>
+        <a href="contact.html?service=consulting" class="service-arrow" style="margin-top: 1.25rem; display: inline-block;">Request Cloud Audit &rarr;</a>
+      </div>
+
+      <!-- DIGITAL TRANSFORMATION STRATEGY -->
+      <div class="service-card" id="consulting-transformation">
+        <div class="service-icon">📈</div>
+        <div class="project-tags" style="margin-bottom: 0.75rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <span class="tag tag-web">Legacy Migration</span>
+          <span class="tag tag-web">Agile Milestones</span>
+          <span class="tag tag-web">Risk Mitigation</span>
+        </div>
+        <h3>Digital Transformation Strategy</h3>
+        <p>Digitize legacy workflows smoothly. We construct incremental migration plans, system integration mapping, and agile deployment timelines that minimize disruption to your day-to-day operations and safeguard critical company data.</p>
+        <a href="contact.html?service=consulting" class="service-arrow" style="margin-top: 1.25rem; display: inline-block;">Discuss Strategy &rarr;</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner" id="consultingCtaSection">
+    <h2>Need an architectural blueprint?</h2>
+    <p>We provide initial consultation and tech reviews to help you validate your strategy before building. Let's align your tech choices.</p>
+    <a href="contact.html" class="btn-primary" id="consultingCtaBtn">Schedule a Call</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="index.html" class="logo" id="footerLogo"><img src="assets/logo.jpg" alt="DevAura Logo"></a>
+    <ul class="footer-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <p class="footer-copy">© 2025 DevAura. All rights reserved.</p>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/2637XXXXXXXX" target="_blank" class="whatsapp-float" id="whatsAppFloatBtn" title="Chat on WhatsApp">💬</a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
