@@ -114,3 +114,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+// WhatsApp floating menu toggle
+const waBtn = document.getElementById('waFloatBtn');
+const waMenu = document.getElementById('waMenu');
+
+if (waBtn && waMenu) {
+  waBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = waMenu.classList.toggle('show');
+    waBtn.classList.toggle('open', isOpen);
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!waBtn.contains(e.target) && !waMenu.contains(e.target)) {
+      waMenu.classList.remove('show');
+      waBtn.classList.remove('open');
+    }
+  });
+}
