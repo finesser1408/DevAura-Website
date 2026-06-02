@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://devaura.co.zw/sitemap.xml
+
+# Disallow non-content directories
+Disallow: /js/
+Disallow: /css/
