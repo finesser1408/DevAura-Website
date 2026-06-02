@@ -11,13 +11,15 @@
   <meta name="author" content="DevAura">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#050810">
+  <link rel="canonical" href="https://dev-aura-weld.vercel.app/">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="DevAura - Premium Software Development Studio in Zimbabwe">
   <meta property="og:description"
     content="Web development, mobile apps, graphics design, and software consulting. Based in Harare, Zimbabwe.">
-  <meta property="og:image" content="assets/logo.jpg">
+  <meta property="og:image" content="https://dev-aura-weld.vercel.app/assets/logo.jpg">
+  <meta property="og:url" content="https://dev-aura-weld.vercel.app/">
   <meta property="og:locale" content="en_ZW">
 
   <!-- Twitter Card -->
@@ -25,7 +27,7 @@
   <meta name="twitter:title" content="DevAura - Premium Software Development Studio in Zimbabwe">
   <meta name="twitter:description"
     content="Web development, mobile apps, graphics design, and software consulting. Based in Harare, Zimbabwe.">
-  <meta name="twitter:image" content="assets/logo.jpg">
+  <meta name="twitter:image" content="https://dev-aura-weld.vercel.app/assets/logo.jpg">
 
   <title>DevAura - Software Development Studio | Web, Mobile, Branding | Harare, Zimbabwe</title>
   <link
@@ -40,9 +42,9 @@
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "DevAura",
-    "url": "https://devaura.co.zw/",
-    "logo": "https://devaura.co.zw/assets/logo.jpg",
-    "image": "https://devaura.co.zw/assets/logo.jpg",
+    "url": "https://dev-aura-weld.vercel.app/",
+    "logo": "https://dev-aura-weld.vercel.app/assets/logo.jpg",
+    "image": "https://dev-aura-weld.vercel.app/assets/logo.jpg",
     "description": "DevAura is a Zimbabwean software development studio specializing in web development, mobile apps, graphics design, and software consulting. Based in Harare.",
     "address": {
       "@type": "PostalAddress",
@@ -69,6 +71,18 @@
 
 <body>
 
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-content">
+      <div class="spinner"></div>
+      <div class="loading-text">
+        <span class="loading-line">Built With Precision</span>
+        <span class="loading-line">Powered By Innovation</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="gradient-bg" id="gradientBg"></div>
   <div class="cursor" id="cursor"></div>
   <div class="cursor-ring" id="cursorRing"></div>
 
@@ -309,33 +323,33 @@
               <circle cx="12" cy="10" r="3" />
             </svg></span> Harare, Zimbabwe</div>
       </div>
-      <form class="contact-form reveal" onsubmit="return false;">
+      <form class="contact-form reveal" id="contactForm" onsubmit="return false;">
         <div class="form-row">
           <div class="form-group">
             <label>Name</label>
-            <input type="text" placeholder="Your full name">
+            <input type="text" name="name" placeholder="Your full name" required>
           </div>
           <div class="form-group">
             <label>Email</label>
-            <input type="email" placeholder="your@email.com">
+            <input type="email" name="email" placeholder="your@email.com" required>
           </div>
         </div>
         <div class="form-group">
           <label>Service Needed</label>
-          <select>
+          <select name="service" required>
             <option value="">Select a service...</option>
-            <option>Web Development</option>
-            <option>Mobile App Development</option>
-            <option>Graphics & Branding</option>
-            <option>Software Consulting</option>
-            <option>Other</option>
+            <option value="Web Development">Web Development</option>
+            <option value="Mobile App Development">Mobile App Development</option>
+            <option value="Graphics & Branding">Graphics & Branding</option>
+            <option value="Software Consulting">Software Consulting</option>
+            <option value="Other">Other</option>
           </select>
         </div>
         <div class="form-group">
           <label>Message</label>
-          <textarea placeholder="Tell us about your project..."></textarea>
+          <textarea name="message" placeholder="Tell us about your project..." required></textarea>
         </div>
-        <button type="submit" class="btn-submit">Send Message</button>
+        <button type="submit" class="btn-submit" id="submitBtn">Send Message</button>
       </form>
     </div>
   </section>

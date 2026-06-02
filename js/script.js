@@ -1,11 +1,70 @@
+// Loading screen on page load
+const loadingScreen = document.getElementById('loadingScreen');
+
+window.addEventListener('load', () => {
+  if (loadingScreen) {
+    setTimeout(() => {
+      loadingScreen.classList.add('hidden');
+    }, 2000);
+  }
+});
+
+// Page transition for navigation
+function setupPageTransitions() {
+  const links = document.querySelectorAll('a[href$=".html"]');
+  
+  links.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const href = link.getAttribute('href');
+      
+      // Skip if it's the current page or external link
+      if (href === window.location.pathname.split('/').pop() || 
+          href.startsWith('http') || 
+          href.startsWith('#') ||
+          link.target === '_blank') {
+        return;
+      }
+      
+      e.preventDefault();
+      
+      // Create transition overlay
+      const transition = document.createElement('div');
+      transition.className = 'page-transition';
+      transition.innerHTML = '<div class="spinner"></div>';
+      document.body.appendChild(transition);
+      
+      // Show transition
+      requestAnimationFrame(() => {
+        transition.classList.add('active');
+      });
+      
+      // Navigate after transition
+      setTimeout(() => {
+        window.location.href = href;
+      }, 400);
+    });
+  });
+}
+
+setupPageTransitions();
+
 // Custom cursor
 const cursor = document.getElementById('cursor');
 const ring = document.getElementById('cursorRing');
+const gradientBg = document.getElementById('gradientBg');
 let mx = 0, my = 0, rx = 0, ry = 0;
 
 document.addEventListener('mousemove', e => {
   mx = e.clientX;
   my = e.clientY;
+  
+  // Update gradient background position based on cursor
+  if (gradientBg) {
+    const xPercent = (mx / window.innerWidth) * 100;
+    const yPercent = (my / window.innerHeight) * 100;
+    gradientBg.style.setProperty('--mouse-x', xPercent + '%');
+    gradientBg.style.setProperty('--mouse-y', yPercent + '%');
+  }
 });
 
 function animCursor() {
@@ -134,6 +193,57 @@ if (waBtn && waMenu) {
     if (!waBtn.contains(e.target) && !waMenu.contains(e.target)) {
       waMenu.classList.remove('show');
       waBtn.classList.remove('open');
+    }
+  });
+}
+
+// Formspark contact form submission
+const contactForm = document.getElementById('contactForm');
+const submitBtn = document.getElementById('submitBtn');
+
+if (contactForm && submitBtn) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+    
+    const formData = new FormData(contactForm);
+    const data = Object.fromEntries(formData);
+    
+    try {
+      const response = await fetch('https://submit.formspark.io/f/form_v1_iMbaQmfgCPOHxPTcZIeloXFc', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+      
+      if (response.ok) {
+        submitBtn.textContent = 'Message Sent!';
+        submitBtn.style.background = '#25D366';
+        contactForm.reset();
+        
+        setTimeout(() => {
+          submitBtn.textContent = originalText;
+          submitBtn.style.background = '';
+          submitBtn.disabled = false;
+        }, 3000);
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      submitBtn.textContent = 'Error. Try Again';
+      submitBtn.style.background = '#ef4444';
+      
+      setTimeout(() => {
+        submitBtn.textContent = originalText;
+        submitBtn.style.background = '';
+        submitBtn.disabled = false;
+      }, 3000);
     }
   });
 }
