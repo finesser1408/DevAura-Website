@@ -369,7 +369,7 @@ section { padding: 100px 5%; position: relative; }
 .services { background: var(--bg2); }
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
   gap: 1.5px;
   background: var(--border);
   border: 1px solid var(--border);
@@ -436,7 +436,7 @@ section { padding: 100px 5%; position: relative; }
 .portfolio { background: var(--bg); }
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   gap: 1.5rem;
 }
 .project-card {
@@ -829,6 +829,33 @@ footer .logo { font-size: 1.1rem; }
 
 
 /* ───── RESPONSIVE ───── */
+
+/* Tablet / Small Laptop */
+@media (max-width: 1024px) {
+  section {
+    padding: 80px 5%;
+  }
+  .page-header {
+    padding-top: 130px;
+    padding-bottom: 50px;
+  }
+  .why-item,
+  .service-card {
+    padding: 2rem 1.75rem;
+  }
+  .contact-wrap {
+    gap: 2rem;
+  }
+  .hero-stats {
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  .nav-links {
+    gap: 1.5rem;
+  }
+}
+
+/* Portrait Tablet / Mobile Menu Trigger */
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .hamburger { display: flex; }
@@ -836,10 +863,24 @@ footer .logo { font-size: 1.1rem; }
     display: flex; flex-direction: column;
     position: fixed; top: 72px; left: 0; right: 0;
     background: rgba(5,8,16,0.98);
-    padding: 2rem;
-    gap: 1.5rem;
+    padding: 2.5rem 2rem;
+    gap: 1.75rem;
     backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 229, 255, 0.15);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
   }
+  
+  /* Hamburger active state transition to X */
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+  }
+
   h1 { font-size: 2.6rem; }
   .hero-stats { gap: 1.5rem; }
   .why-grid { grid-template-columns: 1fr; }
@@ -849,6 +890,91 @@ footer .logo { font-size: 1.1rem; }
   .footer-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
   body { cursor: auto; }
   .cursor, .cursor-ring { display: none; }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  section {
+    padding: 60px 4%;
+  }
+  .page-header {
+    padding-top: 110px;
+    padding-bottom: 40px;
+  }
+  .hero {
+    padding: 100px 4% 50px;
+  }
+  h1 {
+    font-size: 2.1rem;
+  }
+  .section-title {
+    font-size: 1.75rem;
+  }
+  .hero-badge {
+    margin-bottom: 1rem;
+  }
+  .hero-sub {
+    font-size: 0.95rem;
+    margin-top: 1rem;
+  }
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem 1.5rem;
+  }
+  .why-item,
+  .service-card {
+    padding: 1.75rem 1.25rem;
+  }
+  .why-item {
+    gap: 1rem;
+  }
+  .why-num {
+    font-size: 2.2rem;
+    min-width: 36px;
+  }
+  .hero-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 1rem;
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+  }
+  .stat-num {
+    font-size: 1.6rem;
+  }
+  .stat-label {
+    font-size: 0.7rem;
+  }
+  .btn-quote {
+    display: none; /* Avoid crowding in very small headers */
+  }
+  .logo img {
+    height: 46px; /* Slightly scale down logo image to fit nicely */
+  }
+  .whatsapp-container {
+    bottom: 16px;
+    right: 16px;
+    gap: 8px;
+  }
+  .whatsapp-float-btn {
+    width: 48px;
+    height: 48px;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+  }
+  .whatsapp-float-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+  .wa-contact-link {
+    padding: 8px 14px 8px 10px;
+    font-size: 0.8rem;
+  }
 }
 
 /* Scroll fade-in */
@@ -861,7 +987,7 @@ footer .logo { font-size: 1.1rem; }
 /* ───── GRAPHICS SHOWCASE ───── */
 .graphics-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 2rem;
   padding: 20px 0;
 }

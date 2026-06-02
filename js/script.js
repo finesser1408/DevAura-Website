@@ -46,8 +46,12 @@ initCursorHover();
 // Nav toggle
 function toggleNav() {
   const navLinks = document.getElementById('navLinks');
+  const hamburger = document.getElementById('hamburger');
   if (navLinks) {
     navLinks.classList.toggle('open');
+  }
+  if (hamburger) {
+    hamburger.classList.toggle('active');
   }
 }
 
