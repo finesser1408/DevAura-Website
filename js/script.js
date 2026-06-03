@@ -198,8 +198,9 @@ if (waBtn && waMenu) {
 }
 
 // Formspark contact form submission
-const contactForm = document.getElementById('contactForm');
-const submitBtn = document.getElementById('submitBtn');
+const contactForm = document.querySelector('.contact-form');
+const submitBtn = document.querySelector('.btn-submit');
+const successOverlay = document.getElementById('successOverlay');
 
 if (contactForm && submitBtn) {
   contactForm.addEventListener('submit', async (e) => {
@@ -213,7 +214,7 @@ if (contactForm && submitBtn) {
     const data = Object.fromEntries(formData);
     
     try {
-      const response = await fetch('https://submit.formspark.io/f/form_v1_iMbaQmfgCPOHxPTcZIeloXFc', {
+      const response = await fetch('https://submit-form.com/JFlNXVHYh', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -223,27 +224,27 @@ if (contactForm && submitBtn) {
       });
       
       if (response.ok) {
-        submitBtn.textContent = 'Message Sent!';
-        submitBtn.style.background = '#25D366';
-        contactForm.reset();
+        // Show success overlay
+        if (successOverlay) {
+          successOverlay.classList.add('active');
+          
+          // Hide overlay after 5 seconds
+          setTimeout(() => {
+            successOverlay.classList.remove('active');
+          }, 5000);
+        }
         
-        setTimeout(() => {
-          submitBtn.textContent = originalText;
-          submitBtn.style.background = '';
-          submitBtn.disabled = false;
-        }, 3000);
+        contactForm.reset();
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
       } else {
-        throw new Error('Form submission failed');
+        const errorData = await response.json().catch(() => ({ message: 'Form submission failed' }));
+        throw new Error(errorData.message || 'Form submission failed');
       }
     } catch (error) {
-      submitBtn.textContent = 'Error. Try Again';
-      submitBtn.style.background = '#ef4444';
-      
-      setTimeout(() => {
-        submitBtn.textContent = originalText;
-        submitBtn.style.background = '';
-        submitBtn.disabled = false;
-      }, 3000);
+      alert('Error: ' + error.message);
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
     }
   });
 }
