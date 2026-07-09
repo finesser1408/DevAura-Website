@@ -30,41 +30,15 @@ function setupPageTransitions() {
 }
 setupPageTransitions();
 
-// ─── Custom Cursor ───
-const cursor = document.getElementById('cursor');
-const ring = document.getElementById('cursorRing');
+// ─── Gradient Background Mouse Tracking ───
 const gradientBg = document.getElementById('gradientBg');
-let mx = 0, my = 0, rx = 0, ry = 0;
 
 document.addEventListener('mousemove', e => {
-  mx = e.clientX; my = e.clientY;
   if (gradientBg) {
-    gradientBg.style.setProperty('--mouse-x', (mx / window.innerWidth * 100) + '%');
-    gradientBg.style.setProperty('--mouse-y', (my / window.innerHeight * 100) + '%');
+    gradientBg.style.setProperty('--mouse-x', (e.clientX / window.innerWidth * 100) + '%');
+    gradientBg.style.setProperty('--mouse-y', (e.clientY / window.innerHeight * 100) + '%');
   }
 });
-
-function animCursor() {
-  if (cursor && ring) {
-    cursor.style.left = mx + 'px'; cursor.style.top = my + 'px';
-    rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
-    ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
-  }
-  requestAnimationFrame(animCursor);
-}
-if (cursor && ring) animCursor();
-
-function initCursorHover() {
-  document.querySelectorAll('a, button, .service-card, .project-card, input, select, textarea, .tech-card, .product-card, .tech-filter, .portfolio-filter').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-      if (ring) { ring.style.transform = 'translate(-50%,-50%) scale(1.5)'; ring.style.borderColor = 'rgba(0,229,255,0.8)'; }
-    });
-    el.addEventListener('mouseleave', () => {
-      if (ring) { ring.style.transform = 'translate(-50%,-50%) scale(1)'; ring.style.borderColor = 'rgba(0,229,255,0.5)'; }
-    });
-  });
-}
-initCursorHover();
 
 // ─── Nav Toggle ───
 function toggleNav() {
@@ -372,16 +346,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// ─── Nav Background on Scroll ───
+// ─── Nav Background on Scroll (IntersectionObserver) ───
 const nav = document.querySelector('nav');
 if (nav) {
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      nav.style.boxShadow = '0 4px 20px rgba(0,0,0,0.3)';
-    } else {
-      nav.style.boxShadow = 'none';
-    }
-  }, { passive: true });
+  const navObserver = new IntersectionObserver(
+    ([e]) => {
+      nav.style.boxShadow = e.isIntersecting ? 'none' : '0 4px 20px rgba(0,0,0,0.3)';
+    },
+    { threshold: [0, 0.01] }
+  );
+  // Observe a sentinel element at the top
+  const sentinel = document.createElement('div');
+  sentinel.style.height = '1px';
+  sentinel.style.position = 'absolute';
+  sentinel.style.top = '0';
+  document.body.insertBefore(sentinel, document.body.firstChild);
+  navObserver.observe(sentinel);
 }
 
 // ─── Reinitialize Cursor Hover on Dynamic Content ───
