@@ -1,5 +1,22 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* Skip Link for Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--cyan);
+  color: var(--bg);
+  padding: 8px 16px;
+  z-index: 100000;
+  text-decoration: none;
+  font-weight: 600;
+  transition: top 0.3s;
+}
+.skip-link:focus {
+  top: 0;
+}
+
 :root {
   --bg: #050810;
   --bg2: #0a0f1e;
@@ -1166,4 +1183,4 @@ section { padding: 100px 5%; position: relative; z-index: 2; }
   .calc-check { font-size: 0.78rem; padding: 0.3rem 0.6rem; }
   .calculator-wrap { padding: 1.5rem; }
   .trust-logos { gap: 0.75rem; }
-  .
+}

@@ -1,0 +1,49 @@
+{
+  "name": "DevAura - Software Development & AI Solutions",
+  "short_name": "DevAura",
+  "description": "DevAura builds custom software, AI solutions, websites, mobile applications, and cloud platforms for startups and businesses across Zimbabwe and beyond.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050810",
+  "theme_color": "#050810",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "assets/logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "technology", "software"],
+  "shortcuts": [
+    {
+      "name": "Services",
+      "short_name": "Services",
+      "description": "View our software development services",
+      "url": "/services.html",
+      "icons": [{ "src": "assets/logo.jpg", "sizes": "96x96" }]
+    },
+    {
+      "name": "Portfolio",
+      "short_name": "Portfolio",
+      "description": "View our shipped projects",
+      "url": "/portfolio.html",
+      "icons": [{ "src": "assets/logo.jpg", "sizes": "96x96" }]
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Get in touch with us",
+      "url": "/contact.html",
+      "icons": [{ "src": "assets/logo.jpg", "sizes": "96x96" }]
+    }
+  ]
+}
