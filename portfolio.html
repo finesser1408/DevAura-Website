@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -30,7 +30,7 @@
   <title>Our Portfolio - DevAura | Web, Mobile, AI & Branding Projects | Zimbabwe</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap&family=DM+Sans:wght@300;400;500&display=swap&display=swap" rel="stylesheet">
   <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
   <link rel="stylesheet" href="css/style.css">
   <link rel="manifest" href="manifest.json">
@@ -60,13 +60,7 @@
 
 <body>
 
-  <div class="loading-screen" id="loadingScreen">
-    <div class="loading-content"><div class="spinner"></div><div class="loading-text"><span class="loading-line">Code with Clarity</span><span class="loading-line">Build with Aura</span></div></div>
-  </div>
-
-  <div class="gradient-bg" id="gradientBg"></div>
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="gradient-bg" id="gradientBg" aria-hidden="true"></div>
 
   <!-- NAV -->
   <nav>
@@ -228,7 +222,13 @@
     </div>
     <div class="graphics-grid reveal">
       <div class="graphic-card">
-        <div class="graphic-thumb" style="background:#0e1220;"><img src="assets/Flyers/Ngaa Logo.jpeg" alt="Ngaa Custom Brand Logo" loading="lazy" style="object-fit: contain; padding: 2rem;"></div>
+        <div class="graphic-thumb" style="background:#0e1220;">
+          <picture>
+            <source srcset="assets/Flyers/optimized/Ngaa Logo.avif" type="image/avif">
+            <source srcset="assets/Flyers/optimized/Ngaa Logo.webp" type="image/webp">
+            <img src="assets/Flyers/optimized/Ngaa Logo.jpg" decoding="async" fetchpriority="low" alt="Ngaa Custom Brand Logo" loading="lazy" width="300" height="380" style="object-fit: contain; padding: 2rem;">
+          </picture>
+        </div>
         <div class="graphic-info">
           <div class="project-tags"><span class="tag tag-web">Branding</span><span class="tag tag-web">Logo</span></div>
           <h3>Ngaa Custom Brand Logo</h3>
@@ -237,7 +237,13 @@
         </div>
       </div>
       <div class="graphic-card">
-        <div class="graphic-thumb"><img src="assets/Flyers/Graphics Design Flyer.png" alt="DevAura Graphics Flyer" loading="lazy"></div>
+        <div class="graphic-thumb">
+          <picture>
+            <source srcset="assets/Flyers/optimized/Graphics Design Flyer.avif" type="image/avif">
+            <source srcset="assets/Flyers/optimized/Graphics Design Flyer.webp" type="image/webp">
+            <img src="assets/Flyers/optimized/Graphics Design Flyer.jpg" decoding="async" fetchpriority="low" alt="DevAura Graphics Flyer" loading="lazy" width="300" height="380">
+          </picture>
+        </div>
         <div class="graphic-info">
           <div class="project-tags"><span class="tag tag-web">Flyer</span><span class="tag tag-web">Marketing</span></div>
           <h3>DevAura Graphics Flyer</h3>
@@ -246,7 +252,13 @@
         </div>
       </div>
       <div class="graphic-card">
-        <div class="graphic-thumb"><img src="assets/Flyers/Mobile Dev Flyer.png" alt="Mobile App Development Flyer" loading="lazy"></div>
+        <div class="graphic-thumb">
+          <picture>
+            <source srcset="assets/Flyers/optimized/Mobile Dev Flyer.avif" type="image/avif">
+            <source srcset="assets/Flyers/optimized/Mobile Dev Flyer.webp" type="image/webp">
+            <img src="assets/Flyers/optimized/Mobile Dev Flyer.jpg" decoding="async" fetchpriority="low" alt="Mobile App Development Flyer" loading="lazy" width="300" height="380">
+          </picture>
+        </div>
         <div class="graphic-info">
           <div class="project-tags"><span class="tag tag-mobile">Flyer</span><span class="tag tag-mobile">Mobile</span></div>
           <h3>Mobile App Development Flyer</h3>
@@ -255,7 +267,13 @@
         </div>
       </div>
       <div class="graphic-card">
-        <div class="graphic-thumb"><img src="assets/Flyers/WebDev Flyer.png" alt="Web Development Flyer" loading="lazy"></div>
+        <div class="graphic-thumb">
+          <picture>
+            <source srcset="assets/Flyers/optimized/WebDev Flyer.avif" type="image/avif">
+            <source srcset="assets/Flyers/optimized/WebDev Flyer.webp" type="image/webp">
+            <img src="assets/Flyers/optimized/WebDev Flyer.jpg" decoding="async" fetchpriority="low" alt="Web Development Flyer" loading="lazy" width="300" height="380">
+          </picture>
+        </div>
         <div class="graphic-info">
           <div class="project-tags"><span class="tag tag-web">Flyer</span><span class="tag tag-web">Web</span></div>
           <h3>Web Development Flyer</h3>

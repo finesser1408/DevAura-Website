@@ -4,11 +4,17 @@
 
 // ─── Loading Screen ───
 const loadingScreen = document.getElementById('loadingScreen');
-window.addEventListener('load', () => {
-  if (loadingScreen) {
-    setTimeout(() => loadingScreen.classList.add('hidden'), 1800);
+function hideLoadingScreen() {
+  if (loadingScreen && !loadingScreen.classList.contains('hidden')) {
+    loadingScreen.classList.add('hidden');
   }
-});
+}
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+  hideLoadingScreen();
+} else {
+  document.addEventListener('DOMContentLoaded', hideLoadingScreen, { once: true });
+}
+window.addEventListener('load', hideLoadingScreen, { once: true });
 
 // ─── Page Transitions ───
 function setupPageTransitions() {
@@ -32,13 +38,36 @@ setupPageTransitions();
 
 // ─── Gradient Background Mouse Tracking ───
 const gradientBg = document.getElementById('gradientBg');
+const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+const coarsePointerQuery = window.matchMedia('(pointer: coarse)');
 
-document.addEventListener('mousemove', e => {
-  if (gradientBg) {
-    gradientBg.style.setProperty('--mouse-x', (e.clientX / window.innerWidth * 100) + '%');
-    gradientBg.style.setProperty('--mouse-y', (e.clientY / window.innerHeight * 100) + '%');
-  }
-});
+function shouldTrackPointer() {
+  return gradientBg && !motionQuery.matches && !coarsePointerQuery.matches;
+}
+
+if (gradientBg) {
+  let rafId = 0;
+  let lastX = 50;
+  let lastY = 50;
+  const applyMouseVars = () => {
+    rafId = 0;
+    gradientBg.style.setProperty('--mouse-x', lastX + '%');
+    gradientBg.style.setProperty('--mouse-y', lastY + '%');
+  };
+  const onMouseMove = e => {
+    if (!shouldTrackPointer()) return;
+    lastX = (e.clientX / window.innerWidth) * 100;
+    lastY = (e.clientY / window.innerHeight) * 100;
+    if (!rafId) rafId = requestAnimationFrame(applyMouseVars);
+  };
+  document.addEventListener('mousemove', onMouseMove, { passive: true });
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden && rafId) {
+      cancelAnimationFrame(rafId);
+      rafId = 0;
+    }
+  });
+}
 
 // ─── Nav Toggle ───
 function toggleNav() {
@@ -364,6 +393,4 @@ if (nav) {
   navObserver.observe(sentinel);
 }
 
-// ─── Reinitialize Cursor Hover on Dynamic Content ───
-// Run after a short delay to catch dynamically rendered elements
-setTimeout(initCursorHover, 1000);
+
